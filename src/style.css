@@ -1,0 +1,106 @@
+
+/* background */
+body {
+    height: 100vh;
+    background: url('./images/bg-desktop.svg') center center no-repeat;
+    background-size:cover ;
+    background-color: hsl(257, 40%, 49%);  
+    background-attachment: fixed;
+}   
+
+@media (max-width: 320px){
+    body {
+        height: 100vh;
+         background: url('images/bg-mobile.svg') center center no-repeat;
+    }
+
+}
+/* HEADER */
+
+.logo{
+    padding: 2% 0% 0% 5%
+
+}
+
+/* MAIN */
+
+.main {
+    padding: 4% 5% 0 5%;
+    display: grid;
+    grid-template-areas: "foto about";
+    grid-gap: 4%;
+   
+}
+.foto{
+    grid-area: foto;
+    grid-gap: 5%;
+}
+
+.about{
+    grid-area: about ;
+    padding-top:10% ; 
+    }
+
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: aliceblue;
+    line-height: 60px;
+    font-size: 3rem; 
+}
+
+p{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: aliceblue;
+    font-size: 1.23rem;
+    line-height: 30px;
+}
+
+a .about, .btn-know-more{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    color: aliceblue;
+    background-color: hsl(300, 69%, 71%);
+
+    padding : 10px 50px 10px 50px ;
+    border-radius: 50px;
+    
+}
+
+@media only screen and (max-width: 425px){
+     .main {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+         "foto"
+         "about";
+       align-items: center;
+        
+        }
+}
+/* FOOTER */
+.social{
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 2.5%;
+    
+    
+}
+
+.footer .social a{
+    padding: 1%;
+    margin: 5px;
+    font-size: 1rem;
+    color: aliceblue;
+    border: 2px solid white;
+
+    border-radius: 50%;
+}
+
+.footer .social a:hover{  
+    color: hsl(300, 69%, 71%);
+    border-color: hsl(300, 69%, 71%);
+}
+
